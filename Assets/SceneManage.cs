@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SceneManage : MonoBehaviour {
 
+    public float timer;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,12 +20,24 @@ public class SceneManage : MonoBehaviour {
 
             StartCoroutine(NextScene());
         }
+
+        
 	}
 
-    IEnumerator NextScene()
+    //player colliding with door triggers
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Hit Door");
+            StartCoroutine(NextScene());
+        }
+    }
+
+    public IEnumerator NextScene()
     {
         
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(timer);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
        
     }
