@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManger : MonoBehaviour {
 
     float AngryMeter=100f;
-    static float currentAngryInt=100f;
+    public static float currentAngry=50f;
 
 	// Use this for initialization
 	void Start () {
@@ -16,4 +16,29 @@ public class GameManger : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    // call this when you want to add or take away from angry meter
+    public void changeAngryMeter(float amount)
+    {
+        //adds the amount to the angry meter if it's above 100 set it back to 100
+        //if it's below or = to 0 put in loose condition and make sure it's at 0;
+        currentAngry = currentAngry + amount;
+
+        if (currentAngry > 50)
+        {
+            currentAngry = 50;
+        }
+        else
+        {
+           FindObjectOfType<RythmUI>().angryMeterControl(amount);
+        }
+           if (currentAngry <= 0)
+        {
+            //can also put loose condition
+            currentAngry = 0;
+        }
+
+
+    }
+    
 }
