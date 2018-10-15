@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour {
 
@@ -73,9 +74,12 @@ public class AudioManager : MonoBehaviour {
 
     IEnumerator ChangeColor()
     {
-        manImage.color = Color.green;
-        yield return new WaitForSeconds(0.5f);
-        manImage.color = Color.white;
-        CanHit = false;
+        if (SceneManager.GetActiveScene().name == "BaseScene")
+        {
+            manImage.color = Color.green;
+            yield return new WaitForSeconds(0.5f);
+            manImage.color = Color.white;
+            CanHit = false;
+        }
     }
 }
