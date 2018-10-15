@@ -1,17 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InputManager : MonoBehaviour {
 
     private AudioManager audioManager;
     public float offset;
     private GameObject player;
+    private Image phoneImage;
 
 	// Use this for initialization
 	void Start () {
+        
         audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         player = GameObject.FindGameObjectWithTag("Player");
+        phoneImage = GameObject.FindGameObjectWithTag("Phone").GetComponent<Image>();
+       
     }
 	
 	// Update is called once per frame
@@ -27,6 +33,20 @@ public class InputManager : MonoBehaviour {
         //}
 
 
+    
+      if (SceneManager.GetActiveScene().name == "BaseScene")
+        {
+        //
+        // for phone popup hold left shift
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            phoneImage.enabled = true;
+        }
+        else
+        {
+            phoneImage.enabled = false;
+        }
+    }
 
         if (Input.GetKeyDown(KeyCode.W) && audioManager.CanHit == true)
         {
