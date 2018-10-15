@@ -16,31 +16,42 @@ public class InputManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Space) && audioManager.CanHit == true)
-        {
-            Debug.Log("Hit Beat");
+        //if (Input.GetKeyDown(KeyCode.Space) && audioManager.CanHit == true)
+        //{
+        //    Debug.Log("Hit Beat");
 
-        }
-        else if (Input.GetKeyDown(KeyCode.Space) && audioManager.CanHit == false)
-        {
-            Debug.Log("Missed Beat");
-        }
+        //}
+        //else if (Input.GetKeyDown(KeyCode.Space) && audioManager.CanHit == false)
+        //{
+        //    Debug.Log("Missed Beat");
+        //}
 
-        if(Input.GetKeyDown(KeyCode.W))
+
+
+        if (Input.GetKeyDown(KeyCode.W) && audioManager.CanHit == true)
         {
             player.transform.position += new Vector3(-offset, 0, 0);
+            FindObjectOfType<GameManger>().changeAngryMeter(2);
+           
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetKeyDown(KeyCode.S) && audioManager.CanHit == true)
         {
             player.transform.position += new Vector3(offset, 0, 0);
+            FindObjectOfType<GameManger>().changeAngryMeter(2);
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        else if (Input.GetKeyDown(KeyCode.A) && audioManager.CanHit == true)
         {
             player.transform.position += new Vector3(0, 0, -offset);
+            FindObjectOfType<GameManger>().changeAngryMeter(2);
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        else if (Input.GetKeyDown(KeyCode.D) && audioManager.CanHit == true)
         {
             player.transform.position += new Vector3(0, 0, offset);
+            FindObjectOfType<GameManger>().changeAngryMeter(2);
+        }
+        else if(Input.anyKeyDown && audioManager.CanHit == false)
+        {
+            FindObjectOfType<GameManger>().changeAngryMeter(-5);
         }
 
     }
