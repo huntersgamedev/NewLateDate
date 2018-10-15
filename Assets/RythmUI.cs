@@ -8,7 +8,8 @@ public class RythmUI : MonoBehaviour {
     public Image AngryIndicator;
     private float FullMeterX= 597.3f;
     private float EmptyMeterX = 66.8f;
-    private float MoveAmount;  
+    private float MoveAmount;
+    public Image Profile;
        
 
 	// Use this for initialization
@@ -55,8 +56,24 @@ public class RythmUI : MonoBehaviour {
 
 
         
+
+      
+
     }
 
+    public void TurnOn(bool On)
+    {
+        if (On == true)
+        {
+            Profile.GetComponent<Image>().enabled = true;
+        }
 
+        else
+        {
+            Profile.GetComponent<Image>().enabled = false;
+        }
+
+        
+    }
 
 }
