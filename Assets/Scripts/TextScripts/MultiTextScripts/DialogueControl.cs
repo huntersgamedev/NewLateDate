@@ -183,7 +183,7 @@ public class DialogueControl : MonoBehaviour {
             Atext.GetComponent<Text>().text = SallyAA;
             Btext.GetComponent<Text>().text = SallyAB;
             Ctext.GetComponent<Text>().text = SallyAC;
-            AIresponse.GetComponent<Text>().text = SallyReplyA;
+            AIresponse.GetComponent<Text>().text = SallyReplyA; 
         }
 
         //tier 2

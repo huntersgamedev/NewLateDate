@@ -32,26 +32,31 @@ public class InputManager : MonoBehaviour {
         {
             player.transform.position += new Vector3(-offset, 0, 0);
             FindObjectOfType<GameManger>().changeAngryMeter(2);
-           
+            FindObjectOfType<RythmUI>().setFeedback(true);
+
         }
         else if (Input.GetKeyDown(KeyCode.S) && audioManager.CanHit == true)
         {
             player.transform.position += new Vector3(offset, 0, 0);
             FindObjectOfType<GameManger>().changeAngryMeter(2);
+            FindObjectOfType<RythmUI>().setFeedback(true);
         }
         else if (Input.GetKeyDown(KeyCode.A) && audioManager.CanHit == true)
         {
             player.transform.position += new Vector3(0, 0, -offset);
             FindObjectOfType<GameManger>().changeAngryMeter(2);
+            FindObjectOfType<RythmUI>().setFeedback(true);
         }
         else if (Input.GetKeyDown(KeyCode.D) && audioManager.CanHit == true)
         {
             player.transform.position += new Vector3(0, 0, offset);
             FindObjectOfType<GameManger>().changeAngryMeter(2);
+            FindObjectOfType<RythmUI>().setFeedback(true);
         }
         else if(Input.anyKeyDown && audioManager.CanHit == false)
         {
             FindObjectOfType<GameManger>().changeAngryMeter(-5);
+            FindObjectOfType<RythmUI>().setFeedback(false);
         }
 
     }

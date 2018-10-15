@@ -10,10 +10,18 @@ public class RythmUI : MonoBehaviour {
     private float EmptyMeterX = 66.8f;
     private float MoveAmount;
     public Image Profile;
-       
+    public Image InputFeedback;
+    public Sprite GoodFeedback;
+    public Sprite BadFeedback;
 
-	// Use this for initialization
-	void Start () {
+    //timer
+    float addOneTimer = 0;
+    const float AddOnevisibleTimer = .5f;
+
+
+
+    // Use this for initialization
+    void Start () {
         // AngryIndicator.transform.position = new Vector3(CurrentPosition,AngryIndicator.transform.position.y,AngryIndicator.transform.position.z));
 
         angryMeterControl(GameManger.currentAngry);
@@ -23,6 +31,16 @@ public class RythmUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //Testing Meter
+        if(addOneTimer >= 0)
+        {
+            addOneTimer -= Time.deltaTime;
+
+            if(addOneTimer<= 0)
+            {
+                InputFeedback.GetComponent<Image>().enabled = false;
+            }
+        }
+
       
 	}
 
@@ -74,6 +92,23 @@ public class RythmUI : MonoBehaviour {
         }
 
         
+    }
+
+
+    public void setFeedback(bool good)
+    {
+        addOneTimer = AddOnevisibleTimer;
+        InputFeedback.GetComponent<Image>().enabled=true;
+
+        if (good == true)
+        {
+            InputFeedback.GetComponent<Image>().sprite = GoodFeedback;
+        }
+
+        else
+        {
+            InputFeedback.GetComponent<Image>().sprite = BadFeedback;
+        }
     }
 
 }
