@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 114898665520919394}
   - component: {fileID: 114132163960735700}
   m_Layer: 5
-  m_Name: AngryMeter
+  m_Name: RyhtmUI 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,6 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AngryIndicator: {fileID: 114031814515294628}
+  Profile: {fileID: 0}
 --- !u!114 &114361418731435278
 MonoBehaviour:
   m_ObjectHideFlags: 1

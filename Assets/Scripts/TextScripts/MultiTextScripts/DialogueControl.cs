@@ -210,7 +210,7 @@ public class DialogueControl : MonoBehaviour {
             AIresponse.GetComponent<Text>().text = SallyReplyAC;
         }
 
-        //tier 
+        //tier 3
         if (currentPos == "SallyAAA")
         {
             Atext.GetComponent<Text>().text = SallyAAA;
@@ -249,9 +249,9 @@ public class DialogueControl : MonoBehaviour {
         //tier 2
         if (currentPos == "SallyBA")
         {
-            Atext.GetComponent<Text>().text = SallyBA;
-            Btext.GetComponent<Text>().text = SallyBB;
-            Ctext.GetComponent<Text>().text = SallyBC;
+            Atext.GetComponent<Text>().text = SallyBAA;
+            Btext.GetComponent<Text>().text = SallyBAB;
+            Ctext.GetComponent<Text>().text = SallyBAC;
             AIresponse.GetComponent<Text>().text = SallyReplyBA;
         }
         if (currentPos == "SallyBB")
@@ -333,24 +333,24 @@ public class DialogueControl : MonoBehaviour {
         //tier 3
         if (currentPos == "SallyCCA")
         {
-            Atext.GetComponent<Text>().text = SallyAAA;
-            Btext.GetComponent<Text>().text = SallyAAB;
-            Ctext.GetComponent<Text>().text = SallyAC;
+            Atext.GetComponent<Text>().text = SallyCAA;
+            Btext.GetComponent<Text>().text = SallyCAB;
+            Ctext.GetComponent<Text>().text = SallyCAC;
             AIresponse.GetComponent<Text>().text = SallyReplyCCA;
         }
         if (currentPos == "SallyCCB")
         {
-            Atext.GetComponent<Text>().text = SallyAAA;
-            Btext.GetComponent<Text>().text = SallyAAB;
-            Ctext.GetComponent<Text>().text = SallyAC;
+            Atext.GetComponent<Text>().text = SallyCAA;
+            Btext.GetComponent<Text>().text = SallyCAB;
+            Ctext.GetComponent<Text>().text = SallyCAC;
             AIresponse.GetComponent<Text>().text = SallyReplyCCB;
         }
         if (currentPos == "SallyCCC")
         {
-            Atext.GetComponent<Text>().text = SallyAAA;
-            Btext.GetComponent<Text>().text = SallyAAB;
-            Ctext.GetComponent<Text>().text = SallyAC;
-            AIresponse.GetComponent<Text>().text = SallyReplyCCB;
+            Atext.GetComponent<Text>().text = SallyCAA;
+            Btext.GetComponent<Text>().text = SallyCAB;
+            Ctext.GetComponent<Text>().text = SallyCAC;
+            AIresponse.GetComponent<Text>().text = SallyReplyCCC;
         }
 
     }
