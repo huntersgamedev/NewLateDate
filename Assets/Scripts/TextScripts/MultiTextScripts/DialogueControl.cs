@@ -11,27 +11,61 @@ public class DialogueControl : MonoBehaviour {
     [SerializeField] public Text Ctext;
     [SerializeField] public Text AIresponse;
 
+    string[] arrayA = { "answerA", "answerB", "answerC" };
+
     private static string currentPos = "Sally";
 
 
     //A
     private string SallyA = "Hi Iana.";
-
+    //tier2
     private string SallyAA = "Well most people are idiots.";
     private string SallyAB = "I actually wasn't sure what your name was.";
     private string SallyAC = "I was actually trying to mispronounce it. ";
-
+    //tier3
     private string SallyAAA = "Pizza.";
     private string SallyAAB = "Nothing. ";
     private string SallyAAC = "Poutine?";
 
-    private string SallyABA = "Pizza.";
-    private string SallyABB = "Nothing.";
-    private string SallyABC = "Poutine?";
+    //private string SallyABA = "Pizza.";
+    //private string SallyABB = "Nothing.";
+    //private string SallyABC = "Poutine?";
+    
+    //private string SallyACA = "Pizza.";
+    //private string SallyACB = "Nothing.";
+    //private string SallyACC = "Poutine?";
+    //tier4
+    private string SallyAAAA = "Pizza.";
+    private string SallyABAA = "Nothing.";
+    private string SallyACAA = "Poutine?";
 
-    private string SallyACA = "Pizza.";
-    private string SallyACB = "Nothing.";
-    private string SallyACC = "Poutine?";
+    private string SallyAABA = "Pizza.";
+    private string SallyAACA = "Nothing.";
+
+    private string SallyAAAB = "Pizza.";
+    private string SallyAAAC = "Nothing.";
+
+    private string SallyABCA = "Pizza.";
+    private string SallyACBA = "Nothing.";
+
+    private string SallyABBA = "Pizza.";
+    private string SallyACCA = "Nothing.";
+
+    private string SallyABAB = "Pizza.";
+    private string SallyACAC = "Nothing.";
+
+    private string SallyABBB = "Pizza.";
+    private string SallyACCC = "Nothing.";
+
+    private string SallyABCC = "Pizza.";
+    private string SallyACBB = "Nothing.";
+
+    private string SallyABCB = "Pizza.";
+    private string SallyACBC = "Nothing.";
+
+   
+
+
 
 
     //B
@@ -159,13 +193,13 @@ public class DialogueControl : MonoBehaviour {
         //currentPos += gameObject.name;
         //Debug.Log(gameObject.name);
 
-        //if (currentPos == "SallyA")
-        //{
-        //    Atext.GetComponent<Text>().text = SallyAA;
-        //    Btext.GetComponent<Text>().text = SallyAB;
-        //    Ctext.GetComponent<Text>().text = SallyAC;
-        //    AIresponse.GetComponent<Text>().text = SallyReplyA;
-        //}
+        if (currentPos == "SallyA")
+        {
+           Atext.GetComponent<Text>().text = SallyAA;
+            Btext.GetComponent<Text>().text = SallyAB;
+            Ctext.GetComponent<Text>().text = SallyAC;
+            AIresponse.GetComponent<Text>().text = SallyReplyA;
+        }
     }
 
 

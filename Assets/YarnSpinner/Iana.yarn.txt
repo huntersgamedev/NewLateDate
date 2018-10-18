@@ -1,0 +1,193 @@
+title: Start
+tags: 
+colorID: 0
+position: 528,178
+---
+Hi there!
+
+[[Hi Iana.|IanaNode]]
+
+[[Hi Jana.|JanaNode]]
+
+[[Hi.|HiNode]]
+===
+title: HiNode
+tags: 
+colorID: 0
+position: 859,390
+---
+That's a shitty opener.
+
+[[Well most people are idiots.|IdiotNode]]
+
+[[I actually wasn't sure how to pronouce your name.|PronounceNode]]
+
+[[I was actually trying to mispronounce your name.|MispronounceNode]]
+===
+title: JanaNode
+tags: 
+colorID: 0
+position: 862,157
+---
+You idiot, my name Iana!
+
+[[Well most people are idiots.|IdiotNode]]
+
+[[I actually wasn't sure how to pronouce your name.|PronounceNode]]
+
+[[I was actually trying to mispronounce your name.|MispronounceNode]]
+===
+title: IanaNode
+tags: 
+colorID: 0
+position: 860,-49
+---
+You got my name right! Most people mispronounce it.
+
+[[Well most people are idiots.|IdiotNode]]
+
+[[I actually wasn't sure how to pronouce your name.|PronounceNode]]
+
+[[I was actually trying to mispronounce your name.|MispronounceNode]]
+===
+title: IdiotNode
+tags: 
+colorID: 0
+position: 1261,-31
+---
+ You're damn right!What were you thinking of having to eat 
+
+[[Pizza.|PizzaNode]]
+
+[[I'm actually not that hungry.|NotHungryNode]]
+
+[[Poutine.|PoutineNode]]
+===
+title: PronounceNode
+tags: 
+colorID: 0
+position: 1262,175
+---
+Well atleast you're honest. What should we order for dinner?
+
+[[Pizza.|PizzaNode]]
+
+[[I'm actually not that hungry.|NotHungryNode]]
+
+[[Poutine.|PoutineNode]]
+===
+title: MispronounceNode
+tags: 
+colorID: 0
+position: 1258,386
+---
+You sound like an asshole. I'm willing to look past this if you tell me what you're getting to eat.
+
+[[Pizza.|PizzaNode]]
+
+[[I'm actually not that hungry.|NotHungryNode]]
+
+[[Poutine|PoutineNode]]
+===
+title: PizzaNode
+tags: 
+colorID: 0
+position: 1620,-54
+---
+I guess we can but it feels like you don't know me.
+
+[[You're absolutly right, I don't know you.|ForgotNode]]
+
+[[Right was it poutine you'd prefer.|BackTrackNode]]
+
+[[Who the hell cares, it's just food|JustFoodNode]]
+===
+title: NotHungryNode
+tags: 
+colorID: 0
+position: 1650,204
+---
+Well what are you having to drink?
+
+[[Appletini.|AppletiniNode]]
+
+[[A 40 of malt liquor.|MaltNode]]
+
+[[A glass of wine.|WineNode]]
+===
+title: PoutineNode
+tags: 
+colorID: 0
+position: 1628,491
+---
+Wow, I feel like you know me.
+
+[[I don't know shit.|IDKNode]]
+
+[[Well, it was on your bio.|BioNode]]
+
+[[Ya, I'm just that good.|GoodNode]]
+===
+title: ForgotNode
+tags: 
+colorID: 0
+position: 1922,-491
+---
+Well thats just rude.
+===
+title: JustFoodNode
+tags: 
+colorID: 0
+position: 1938,-60
+---
+Thats the last straw bozo!
+===
+title: BackTrackNode
+tags: 
+colorID: 0
+position: 1947,-283
+---
+Took you long enough to remember!
+===
+title: IDKNode
+tags: 
+colorID: 0
+position: 1957,476
+---
+Sounds about right BOZO! I'm outta here.
+===
+title: BioNode
+tags: 
+colorID: 0
+position: 1950,655
+---
+Ya, I guess I gave that one away.
+===
+title: GoodNode
+tags: 
+colorID: 0
+position: 1944,814
+---
+Tell me more.
+===
+title: AppletiniNode
+tags: 
+colorID: 0
+position: 2238,44
+---
+That sounds delicious
+===
+title: MaltNode
+tags: 
+colorID: 0
+position: 2240,189
+---
+Hell ya!
+===
+title: WineNode
+tags: 
+colorID: 0
+position: 2220,364
+---
+Now you're speaking my language!
+===
