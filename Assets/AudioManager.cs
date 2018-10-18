@@ -8,13 +8,14 @@ public class AudioManager : MonoBehaviour {
 
     private static AudioManager myManagerInstance;
     public float bpm;
-    private float beatInterval, beatTimer , beatIntervalD8, beatTimerD8;
-    public static bool beatFull , beatD8;
-    public static int beatCountFull, beatCountd8;
+    private float beatInterval, beatTimer , beatIntervalD2, beatTimerD2, beatIntervalD8, beatTimerD8;
+    public static bool beatFull , beatD2, beatD8;
+    public static int beatCountFull, beatCountD2, beatCountd8;
 
     public Image manImage;
+    public Image clothingManImage;
     public bool CanHit;
-    
+    public bool CanHitHalf;
 
     private void Awake()
     {
@@ -58,7 +59,20 @@ public class AudioManager : MonoBehaviour {
             StartCoroutine(ChangeColor());
            //anImage.color = Color.green;
         }
-        //divided beat
+        //Half Beat
+        beatD2 = false;
+        beatIntervalD2 = beatInterval / 2;
+        beatTimerD2 += Time.deltaTime;
+        if (beatTimerD2 >= beatIntervalD2)
+        {
+            beatTimerD2 -= beatIntervalD2;
+            beatD2 = true;
+            beatCountD2++;
+            CanHitHalf = true;
+            StartCoroutine(ChangeClothingColor());
+            Debug.Log("Half Beat");
+        }
+        //Eight beat
         beatD8 = false;
         beatIntervalD8 = beatInterval / 8;
         beatTimerD8 += Time.deltaTime;
@@ -74,7 +88,7 @@ public class AudioManager : MonoBehaviour {
 
     IEnumerator ChangeColor()
     {
-        if (SceneManager.GetActiveScene().name == "BaseScene")
+        if (SceneManager.GetActiveScene().name == "BaseScene" || SceneManager.GetActiveScene().name == "BaseScene neil 1")
         {
             manImage.color = Color.green;
             yield return new WaitForSeconds(0.5f);
@@ -82,4 +96,16 @@ public class AudioManager : MonoBehaviour {
             CanHit = false;
         }
     }
+
+    IEnumerator ChangeClothingColor()
+    {
+        if (SceneManager.GetActiveScene().name == "BaseScene" || SceneManager.GetActiveScene().name == "BaseScene neil 1")
+        {
+            clothingManImage.color = Color.green;
+            yield return new WaitForSeconds(0.2f);
+            clothingManImage.color = Color.white;
+            CanHitHalf = false;
+        }
+    }
 }
+

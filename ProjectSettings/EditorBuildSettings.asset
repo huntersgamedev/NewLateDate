@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MultiTextScene.unity
     guid: f517007551a3afd448f1297e53b53581
+  - enabled: 1
+    path: Assets/Scenes/BaseScene neil  1.unity
+    guid: e97ed97dd82426e4c94df0a081ca23ca
   m_configObjects: {}

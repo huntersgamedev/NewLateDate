@@ -34,7 +34,7 @@ public class InputManager : MonoBehaviour {
 
 
     
-      if (SceneManager.GetActiveScene().name == "BaseScene")
+      if (SceneManager.GetActiveScene().name == "BaseScene" || SceneManager.GetActiveScene().name == "BaseScene neil 1")
         {
         //
         // for phone popup hold left shift
