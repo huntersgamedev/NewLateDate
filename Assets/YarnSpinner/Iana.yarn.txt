@@ -55,7 +55,7 @@ tags:
 colorID: 0
 position: 1261,-31
 ---
- You're damn right!What were you thinking of having to eat 
+ You're damn right! What were you thinking of having to eat?
 
 [[Pizza.|PizzaNode]]
 
@@ -100,7 +100,7 @@ I guess we can but it feels like you don't know me.
 
 [[Right was it poutine you'd prefer.|BackTrackNode]]
 
-[[Who the hell cares, it's just food|JustFoodNode]]
+[[Who the hell cares, it's just food!|JustFoodNode]]
 ===
 title: NotHungryNode
 tags: 
@@ -175,7 +175,7 @@ tags:
 colorID: 0
 position: 2238,44
 ---
-That sounds delicious
+That sounds delicious!
 ===
 title: MaltNode
 tags: 
